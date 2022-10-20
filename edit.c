@@ -141,7 +141,7 @@ void display(){
 }
 
 void frekuensi(){
-    char string[] = "Thailand Myanmar DIBATALKAN Malaysia Thailand Myanmar Malaysia Singapura Thailand Malaysia Indonesia Filipina Singapura Thailand Indonesia Malaysia Filipina Singapura Thailand Indonesia Brunei Malaysia Vietnam Filipina Thailand Laos Indonesia Myanmar Singapura Malaysia Filipina ";  
+    char string[] = "Myanmar Thailand Malaysia Thailand Myanmar Malaysia Singapura Thailand Malaysia Indonesia Filipina Singapura Thailand Indonesia Malaysia Filipina Singapura Thailand Indonesia Brunei Malaysia Vietnam Filipina Thailand Laos Indonesia Myanmar Singapura Malaysia Filipina ";  
     char words[20][20];  
     int i = 0, j = 0, k, length, count;  
       
@@ -155,7 +155,6 @@ void frekuensi(){
             j = 0;  
         }  
     }  
-      
     length = i+1;  
     system("clear");
     printf("Jumlah banyaknya tour tuan rumah!\n\n"); 
@@ -166,11 +165,11 @@ void frekuensi(){
         for(j = i+1; j < length; j++){  
            if(strcmp(words[i], words[j]) == 0 && (strcmp(words[j],"0") != 0)){  
                count++;  
-               strcpy(words[j],"0");  
+               strcpy(words[j],"0");
            }   
         } 
-        if(count > 1 ){
-            printf("%s  \t   %d\n", words[i], count); 
+        if (strcmp(words[i],"0") != 0){
+            printf("%s    \t %d\n", words[i], count);
         }
     }  
 }
